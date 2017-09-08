@@ -204,10 +204,20 @@ int main() {
           vector<double> next_x_vals;
           vector<double> next_y_vals;
 
+
+          double poly_int = 2.5;
+          int num_point = 25;
+
+          for(int i; i<num_point;i++){
+          next_x_vals.push_back(poly_int*i);
+          next_y_vals.push_back(polyeval(coeffs, poly_int*i));
+          }
+
+          /*
           for (int i = 0;  i < x_car_space.size();  i++) {
               next_x_vals.push_back(x_car_space[i] ) ;
               next_y_vals.push_back(y_car_space[i] ) ;
-             }
+             }*/
 
           //.. add (x,y) points to list here, points are in reference to the vehicle's coordinate system
           // the points in the simulator are connected by a Yellow line
